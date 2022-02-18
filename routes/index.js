@@ -8,12 +8,18 @@ router.get('/', function (req, res, next) {
 
 // Purchase route
 router.get('/purchase', (req, res) => {
-  res.json({ blah: 'blah' });
+  res.render('routesView', {
+    title: 'Purchase Page',
+    functionality: 'This used is used for purchasing.',
+  });
 });
 
 // Auth route
 router.get('/auth', (req, res) => {
-  res.json({ blah: 'auth blah' });
+  res.render('routesView', {
+    title: 'Authentication Page',
+    functionality: 'You can use this page to login.',
+  });
 });
 
 module.exports = router;
